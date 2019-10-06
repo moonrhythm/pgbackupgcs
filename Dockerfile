@@ -1,8 +1,7 @@
 FROM postgres:alpine
 
-RUN apk add curl python && \
-	curl -O https://storage.googleapis.com/pub/gsutil.tar.gz && \
-	tar zxf gsutil.tar.gz && \
+RUN apk add --no-cache curl bash python && \
+	curl https://sdk.cloud.google.com | bash && \
 	mkdir /data
 
 ADD backup.sh /
