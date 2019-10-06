@@ -6,6 +6,7 @@ RUN apk add curl python && \
 	mkdir /data
 
 ADD backup.sh /
+RUN chmod +x /backup.sh
 
 WORKDIR /data
 
