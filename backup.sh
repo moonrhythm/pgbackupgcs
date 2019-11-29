@@ -3,7 +3,7 @@ export PATH=$PATH:/root/google-cloud-sdk/bin
 
 if [[ ! -z "${GOOGLE_APPLICATION_CREDENTIALS_JSON}" ]]; then
   echo $GOOGLE_APPLICATION_CREDENTIALS_JSON > /root/google-credential.json
-  export GOOGLE_APPLICATION_CREDENTIALS=/root/google-credential.json
+  gcloud auth activate-service-account --key-file /root/google-credential.json
 fi
 
 if [[ -z "${PGDATABASE}" ]]; then
