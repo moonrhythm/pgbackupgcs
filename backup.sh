@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 export PATH=$PATH:/root/google-cloud-sdk/bin
 
 if [[ ! -z "${GOOGLE_APPLICATION_CREDENTIALS_JSON}" ]]; then
