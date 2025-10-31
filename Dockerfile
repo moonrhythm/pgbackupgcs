@@ -1,4 +1,4 @@
-FROM postgres:bullseye
+FROM postgres:bookworm
 
 RUN apt-get update && \
 	apt-get install -y --no-install-recommends \
